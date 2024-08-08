@@ -10,39 +10,44 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #000;
             background-image: url('/mnt/data/EVOLVED AUTO - 2.PNG');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             color: #00FFFF;
-            overflow: auto;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow-x: hidden;
         }
+
         .container {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             border-radius: 10px;
             width: 95%;
             max-width: 1200px;
-            margin: 20px auto;
+            margin-top: 20px;
             box-sizing: border-box;
         }
+
         h1, h2 {
             color: #00FFFF;
             margin-bottom: 20px;
             margin-top: 0;
         }
+
         h1 {
             font-size: 2em;
         }
+
         h2 {
             font-size: 1.5em;
         }
+
         .gallery-link {
             display: block;
             margin: 20px 0;
@@ -51,14 +56,17 @@
             font-size: 1.5em;
             transition: color 0.3s;
         }
+
         .gallery-link:hover {
             color: #008b8b;
         }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 10px;
         }
+
         .gallery img {
             width: 100%;
             height: auto;
@@ -66,10 +74,12 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .gallery img:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
         /* Lightbox styles */
         .lightbox {
             position: fixed;
@@ -85,15 +95,18 @@
             opacity: 0;
             transition: visibility 0s, opacity 0.5s;
         }
+
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
         }
+
         .lightbox:target {
             visibility: visible;
             opacity: 1;
         }
+
         .close {
             position: absolute;
             top: 20px;
@@ -102,19 +115,23 @@
             font-size: 2em;
             text-decoration: none;
         }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.5em;
             }
+
             h2 {
                 font-size: 1.2em;
             }
+
             .gallery-link {
                 font-size: 1.2em;
             }
+
             .container {
                 padding: 10px;
-                margin: 10px auto;
+                margin-top: 10px;
             }
         }
     </style>
@@ -229,4 +246,3 @@
     <!-- Add more lightbox divs as needed -->
 </body>
 </html>
-
