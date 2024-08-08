@@ -36,6 +36,17 @@
             font-size: 2em;
             margin-bottom: 20px;
         }
+        .gallery-link {
+            display: block;
+            margin: 20px 0;
+            color: #00FFFF;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .gallery-link:hover {
+            color: #008b8b;
+        }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -56,6 +67,7 @@
 <body>
     <div class="container">
         <h1>Evolved Auto - Photo Gallery</h1>
+        <a href="index.html" class="gallery-link">Back to Home</a>
         <div class="gallery">
             <!-- Repeat this block for each image -->
             <img src="/path/to/photo1.jpg" alt="Photo 1">
