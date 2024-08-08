@@ -29,12 +29,19 @@
             border-radius: 10px;
             width: 95%;
             max-width: 1200px;
-            margin: 20px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            color: #00FFFF;
+            margin-bottom: 20px;
+            margin-top: 0;
         }
         h1 {
-            color: #00FFFF;
             font-size: 2em;
-            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
         }
         .gallery-link {
             display: block;
@@ -94,6 +101,21 @@
             color: #fff;
             font-size: 2em;
             text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            .gallery-link {
+                font-size: 1.2em;
+            }
+            .container {
+                padding: 10px;
+                margin: 10px auto;
+            }
         }
     </style>
 </head>
