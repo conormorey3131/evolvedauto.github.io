@@ -113,8 +113,10 @@
             top: 20px;
             right: 20px;
             color: #fff;
-            font-size: 2em;
+            font-size: 3em; /* Increased size */
             text-decoration: none;
+            padding: 10px; /* Added padding for touch-friendliness */
+            z-index: 1000; /* Ensure it stays on top */
         }
 
         .arrow {
@@ -322,6 +324,12 @@
         }
 
         lightboxes.forEach(lightbox => {
+            const closeButton = lightbox.querySelector('.close');
+
+            closeButton.addEventListener('touchstart', function(e) {
+                e.stopPropagation(); // Prevent swipe from being triggered
+            });
+
             lightbox.addEventListener('touchstart', function(e) {
                 startX = e.changedTouches[0].screenX;
             });
