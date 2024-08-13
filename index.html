@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,38 +13,80 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #000; /* black background */
-            background-image: url('/mnt/data/EVOLVED AUTO - 2.PNG'); /* background pattern */
+            background-color: #000;
+            background-image: url('/mnt/data/EVOLVED AUTO - 2.PNG');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: #00FFFF; /* matching color scheme */
+            color: #00FFFF;
         }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #00FFFF;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #008b8b;
+        }
+
         .container {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
+            margin-top: 70px; /* Add margin to account for fixed navbar */
         }
+
         h1 {
-            color: #00FFFF; /* matching color scheme */
+            color: #00FFFF;
             font-size: 2em;
             margin-bottom: 20px;
         }
+
         p {
             color: #fff;
             margin: 10px 0;
         }
+
         a {
-            color: #fff; /* White text for all links */
+            color: #fff;
             text-decoration: none;
         }
+
         a:hover {
-            color: #008b8b; /* Change to darker shade on hover */
+            color: #008b8b;
         }
+
         .social-links {
             list-style: none;
             padding: 0;
@@ -51,9 +94,11 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .social-links li {
             margin: 10px;
         }
+
         .social-links a {
             text-decoration: none;
             color: #fff;
@@ -63,9 +108,11 @@
             display: inline-block;
             font-size: 2em;
         }
+
         .social-links a:hover {
-            background-color: #008b8b; /* darker shade */
+            background-color: #008b8b;
         }
+
         .gallery-link {
             display: block;
             margin: 20px 0;
@@ -74,12 +121,22 @@
             font-size: 1.5em;
             transition: color 0.3s;
         }
+
         .gallery-link:hover {
             color: #008b8b;
         }
     </style>
 </head>
+
 <body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <h1>Evolved Auto</h1>
         <p>Email: <a href="mailto:info.evolvedauto@gmail.com">info.evolvedauto@gmail.com</a></p>
@@ -94,4 +151,5 @@
         </ul>
     </div>
 </body>
+
 </html>
