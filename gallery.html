@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +25,40 @@
             overflow-x: hidden;
         }
 
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #00FFFF;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #008b8b;
+        }
+
         .container {
             text-align: center;
             padding: 20px;
@@ -31,11 +66,12 @@
             border-radius: 10px;
             width: 95%;
             max-width: 1200px;
-            margin-top: 20px;
+            margin-top: 70px; /* Added margin to account for fixed navbar */
             box-sizing: border-box;
         }
 
-        h1, h2 {
+        h1,
+        h2 {
             color: #00FFFF;
             margin-bottom: 20px;
             margin-top: 0;
@@ -47,19 +83,6 @@
 
         h2 {
             font-size: 1.5em;
-        }
-
-        .gallery-link {
-            display: block;
-            margin: 20px 0;
-            color: #00FFFF;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-
-        .gallery-link:hover {
-            color: #008b8b;
         }
 
         .gallery {
@@ -113,10 +136,10 @@
             top: 20px;
             right: 20px;
             color: #fff;
-            font-size: 2em; /* Reverted size */
+            font-size: 2em;
             text-decoration: none;
-            padding: 10px; /* Retained some padding for touch-friendliness */
-            z-index: 1000; /* Ensure it stays on top */
+            padding: 10px;
+            z-index: 1000;
         }
 
         .arrow {
@@ -146,10 +169,6 @@
                 font-size: 1.2em;
             }
 
-            .gallery-link {
-                font-size: 1.2em;
-            }
-
             .container {
                 padding: 10px;
                 margin-top: 10px;
@@ -157,13 +176,19 @@
         }
     </style>
 </head>
+
 <body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <h1>Evolved Auto - Photo Gallery</h1>
         <h2>Photos from Fundracer 2024</h2>
-        <a href="index.html" class="gallery-link">
-            <i class="fas fa-home"></i> Home
-        </a>
 
         <div class="gallery">
             <!-- Repeat this block for each image -->
@@ -310,7 +335,7 @@
     <script>
         const images = document.querySelectorAll('.gallery img');
         const lightboxes = document.querySelectorAll('.lightbox');
-        
+
         let startX = 0;
         let endX = 0;
 
@@ -353,4 +378,5 @@
         });
     </script>
 </body>
+
 </html>
