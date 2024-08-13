@@ -306,6 +306,9 @@
         const images = document.querySelectorAll('.gallery img');
         const lightboxes = document.querySelectorAll('.lightbox');
         
+        let startX = 0;
+        let endX = 0;
+
         function changeImage(direction) {
             const currentImage = document.querySelector('.lightbox:target img');
             let currentIndex = parseInt(currentImage.getAttribute('data-index'));
@@ -317,6 +320,24 @@
             const newImage = document.querySelector(`.lightbox img[data-index='${newIndex}']`);
             window.location.hash = `#img${newIndex}`;
         }
+
+        lightboxes.forEach(lightbox => {
+            lightbox.addEventListener('touchstart', function(e) {
+                startX = e.changedTouches[0].screenX;
+            });
+
+            lightbox.addEventListener('touchmove', function(e) {
+                endX = e.changedTouches[0].screenX;
+            });
+
+            lightbox.addEventListener('touchend', function(e) {
+                if (startX > endX + 50) {
+                    changeImage(1); // Swipe left
+                } else if (startX < endX - 50) {
+                    changeImage(-1); // Swipe right
+                }
+            });
+        });
     </script>
 </body>
 </html>
