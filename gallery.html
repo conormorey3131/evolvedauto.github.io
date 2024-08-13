@@ -33,6 +33,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            transition: opacity 0.5s;
         }
 
         .navbar ul {
@@ -66,7 +67,7 @@
             border-radius: 10px;
             width: 95%;
             max-width: 1200px;
-            margin-top: 70px; /* Added margin to account for fixed navbar */
+            margin-top: 70px;
             box-sizing: border-box;
         }
 
@@ -129,6 +130,10 @@
         .lightbox:target {
             visibility: visible;
             opacity: 1;
+        }
+
+        .lightbox:target ~ .navbar {
+            opacity: 0;
         }
 
         .close {
