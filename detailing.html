@@ -122,6 +122,8 @@
             width: 100%;
             height: auto;
             border-radius: 10px;
+            flex-basis: calc(33.33% - 20px); /* Ensure max 3 photos per row */
+            box-sizing: border-box;
         }
 
         .gallery-link {
@@ -135,6 +137,18 @@
 
         .gallery-link:hover {
             color: #008b8b;
+        }
+
+        @media (max-width: 768px) {
+            .gallery img {
+                flex-basis: calc(50% - 20px); /* Max 2 photos per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                flex-basis: 100%; /* Max 1 photo per row on very small screens */
+            }
         }
     </style>
 </head>
