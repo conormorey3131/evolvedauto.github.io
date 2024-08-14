@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailing Services - Evolved Auto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="evolvedAutoFavicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #00FFFF;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #00FFFF;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #008b8b;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 70px; /* Add margin to account for fixed navbar */
+        }
+
+        h1 {
+            color: #00FFFF;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .price-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .price-item {
+            background-color: #333;
+            color: #00FFFF;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex-basis: 300px;
+            text-align: left;
+        }
+
+        .price-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .price-item ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .price-item li {
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .gallery-link {
+            display: block;
+            margin: 20px 0;
+            color: #00FFFF;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .gallery-link:hover {
+            color: #008b8b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detailing.html">Detailing</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Detailing Services - Evolved Auto</h1>
+        <div class="price-list">
+            <div class="price-item">
+                <h2>Mini Valet - €40</h2>
+                <ul>
+                    <li>Pre-Wash</li>
+                    <li>Exterior Wash</li>
+                    <li>Interior Vacuum</li>
+                    <li>Interior Clean</li>
+                </ul>
+            </div>
+            <div class="price-item">
+                <h2>Deep Clean - €70</h2>
+                <ul>
+                    <li>Mini Valet Package</li>
+                    <li>Wheels Cleaned</li>
+                    <li>Door Surrounds Cleaned</li>
+                    <li>Vehicle Health Check (Oil, Coolant, Screen wash fluid, Tyres, Lights)</li>
+                </ul>
+            </div>
+            <div class="price-item">
+                <h2>Ultimate Detail - €120</h2>
+                <ul>
+                    <li>Deep Clean Package</li>
+                    <li>Clay Bar</li>
+                    <li>Iron Fallout Removal</li>
+                    <li>Gloss Enhancement</li>
+                    <li>Full Interior Detail</li>
+                    <li>All Glass Cleaned</li>
+                    <li>5 Month Ceramic Coating</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="price-list">
+            <div class="price-item">
+                <h2>Add-Ons</h2>
+                <ul>
+                    <li><strong>Ceramic Coating and Polishing - POA</strong></li>
+                    <li>Headlight Restoration - €20</li>
+                    <li>Tire Shine - €5</li>
+                    <li>Wheels Cleaned - €5</li>
+                    <li>Large Vehicle Fee - €5</li>
+                    <li>Gloss Enhancement - €15</li>
+                    <li>5 Month Ceramic Coat - €35</li>
+                    <li>Clay Bar - €20</li>
+                    <li>Tar Removal - €10</li>
+                    <li>Interior Ceramic Coat - €30</li>
+                    <li>Engine Bay Detail - €20</li>
+                    <li>Deep Stain Removal - €15</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Gallery of Our Work</h2>
+        <div class="gallery">
+            <img src="bE30.jpg" alt="Car 1 - Detailing Work">
+            <img src="gHyu.jpg" alt="Car 2 - Detailing Work">
+            <img src="gTes.png" alt="Car 3 - Detailing Work">
+            <img src="intTes.jpg" alt="Car 4 - Detailing Work">
+            <img src="rJag.jpg" alt="Car 5 - Detailing Work">
+        </div>
+    </div>
+</body>
+
+</html>
