@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -16,314 +15,164 @@
     <style>
 
         body {
-
             font-family: Arial, sans-serif;
-
             margin: 0;
-
             padding: 0;
-
             background-color: #000;
-
             color: #00FFFF;
-
         }
-
-
-
 
         .navbar {
-
             width: 100%;
-
             background-color: rgba(0, 0, 0, 0.9);
-
             padding: 10px 0;
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             z-index: 1000;
-
         }
-
-
-
 
         .navbar ul {
-
             list-style: none;
-
             padding: 0;
-
             margin: 0;
-
             display: flex;
-
             justify-content: center;
-
             flex-wrap: wrap;
-
         }
-
-
-
 
         .navbar li {
-
             margin: 0 15px;
-
         }
-
-
-
 
         .navbar a {
-
             color: #00FFFF;
-
             text-decoration: none;
-
             font-size: 1.2em;
-
             transition: color 0.3s;
-
         }
-
-
-
 
         .navbar a:hover {
-
             color: #008b8b;
-
         }
-
-
-
 
         .container {
-
             text-align: center;
-
             padding: 20px;
-
             background: rgba(0, 0, 0, 0.7);
-
             border-radius: 10px;
-
             margin-top: 70px; /* Add margin to account for fixed navbar */
-
         }
-
-
-
 
         h1 {
-
             color: #00FFFF;
-
             font-size: 2em;
-
             margin-bottom: 20px;
-
         }
-
-
-
 
         p {
-
             color: #fff;
-
             margin: 10px 0;
-
         }
-
-
-
 
         .gallery {
-
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
             gap: 15px;
-
             margin-top: 20px;
-
         }
-
-
-
 
         .gallery img {
-
             width: 100%;
-
             height: auto;
-
             border-radius: 10px;
-
             transition: transform 0.3s;
-
             object-fit: cover;
-
         }
-
-
-
 
         .gallery img:hover {
-
             transform: scale(1.05);
-
         }
-
-
-
 
         .prev-events-link {
-
             margin-top: 20px;
-
             display: inline-block;
-
             color: #00FFFF;
-
             text-decoration: none;
-
             font-size: 1.2em;
-
             padding: 10px 15px;
-
             background: rgba(0, 128, 128, 0.7);
-
             border-radius: 5px;
-
             transition: background 0.3s;
-
         }
-
-
-
 
         .prev-events-link:hover {
-
             background: rgba(0, 128, 128, 1);
-
         }
-
-
-
 
         @media (max-width: 768px) {
-
             .navbar a {
-
                 font-size: 1em;
-
             }
-
-
-
 
             h1 {
-
                 font-size: 1.5em;
-
             }
-
         }
-
-
-
 
         @media (max-width: 480px) {
-
             .container {
-
                 padding: 15px;
-
                 margin-top: 60px;
-
             }
-
-
-
 
             h1 {
-
                 font-size: 1.2em;
-
             }
-
-
-
 
             p {
-
                 font-size: 0.9em;
-
             }
-
-
-
 
             .gallery {
-
                 grid-template-columns: 1fr;
-
             }
-
         }
-
-
-
 
         a.location-link {
-
             color: #fff;
-
             text-decoration: underline;
-
         }
-
-
-
 
         a.location-link:hover {
-
             color: #00FFFF;
-
         }
-
-
-
 
         .teaser-text {
-
             font-size: 1.5em;
-
             margin-bottom: 20px;
-
             color: #00FFFF;
-
         }
 
-
-
-
         .share-text {
-
             color: #fff;
-
             margin-top: 20px;
+        }
 
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #00FFFF;
+        }
+
+        .footer a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+
+        .footer a:hover {
+            color: #008b8b;
         }
 
     </style>
@@ -333,23 +182,13 @@
 <body>
 
     <div class="navbar">
-
         <ul>
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="detailing.html">Price List</a></li>
-
             <li><a href="gallery.html">Photo Gallery</a></li>
-
             <li><a href="events.html">Events</a></li>
-
         </ul>
-
     </div>
-
-
-
 
     <div class="container">
         <h1>Toy Drive Donation Point</h1>
@@ -365,7 +204,7 @@
         
         <p class="share-text">
             Let’s make this Toy Drive a success! All contributions are appreciated to help brighten a child's holiday season.
-            Pleass note * this is not an event nor a show. Just a drop off.
+            Please note * this is not an event nor a show. Just a drop off.
         </p>
         
         <p>
@@ -376,11 +215,11 @@
 
         <a href="prevEvents.html" class="prev-events-link">Check out our previous events!</a>
     </div>
-            <div class="footer">
+
+    <div class="footer">
         Powered by <a href="https://moreydigital.ie/" target="_blank">Morey Digital</a>
     </div>
 
 </body>
 
 </html>
-
