@@ -4,170 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolved Auto</title>
+    <title>Evolved Auto | Professional Car Detailing & Events</title>
+    <meta name="description" content="Evolved Auto offers premium car detailing services and hosts automotive events in Shannon, Co. Clare. Visit us for professional car care and join our community events.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="evolvedAutoFavicon.ico">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #000;
-            background-image: url('/mnt/data/EVOLVED AUTO - 2.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: #00FFFF;
-        }
-
-        .navbar {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .navbar li {
-            margin: 0 15px;
-        }
-
-        .navbar a {
-            color: #00FFFF;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #008b8b;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            margin-top: 70px; /* Add margin to account for fixed navbar */
-        }
-
-        h1 {
-            color: #00FFFF;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #fff;
-            margin: 10px 0;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #008b8b;
-        }
-
-        .social-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .social-links li {
-            margin: 10px;
-        }
-
-        .social-links a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            border-radius: 50%;
-            transition: background-color 0.3s;
-            display: inline-block;
-            font-size: 2em;
-        }
-
-        .social-links a:hover {
-            background-color: #008b8b;
-        }
-
-        .gallery-link {
-            display: block;
-            margin: 20px 0;
-            color: #00FFFF;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-
-        .gallery-link:hover {
-            color: #008b8b;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #00FFFF;
-        }
-
-        .footer a {
-            color: #00FFFF;
-            text-decoration: underline;
-        }
-
-        .footer a:hover {
-            color: #008b8b;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="detailing.html">Price List</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
-            <li><a href="events.html">Events</a></li>
-        </ul>
-    </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">EVOLVED AUTO</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="detailing.html" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="gallery.html" class="navbar-link">Gallery</a></li>
+                <li class="navbar-item"><a href="events.html" class="navbar-link">Events</a></li>
+            </ul>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
     <div class="container">
-        <h1>Evolved Auto</h1>
-        <p>Bookings: (087) 037 3155</p>
-        <p>Email: <a href="mailto:info@evolvedauto.ie">info@evolvedauto.ie</a></p>
-        <p>Address: <a href="https://maps.app.goo.gl/EA5JDK6pJyZhWpkBA" target="_blank">Bay D7, Smithstown Industrial Estate, Shannon, Co. Clare, V14 TW72</a></p>
-        <ul class="social-links">
-            <li><a href="https://www.tiktok.com/@evolved_auto" target="_blank" class="fab fa-tiktok"></a></li>
-            <li><a href="https://www.instagram.com/evolved_auto/" target="_blank" class="fab fa-instagram"></a></li>
-        </ul>
+        <section class="hero animate-on-scroll">
+            <h1>EVOLVED AUTO</h1>
+            <p>Premium car detailing services and automotive events in Shannon, Co. Clare</p>
+            <a href="detailing.html" class="btn">View Our Services</a>
+        </section>
+
+        <section class="section animate-on-scroll">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <p>Bookings: <a href="tel:+353870373155">(087) 037 3155</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <p>Email: <a href="mailto:info@evolvedauto.ie">info@evolvedauto.ie</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <p>Address: <a href="https://maps.app.goo.gl/EA5JDK6pJyZhWpkBA" target="_blank">Bay D7, Smithstown Industrial Estate, Shannon, Co. Clare, V14 TW72</a></p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@evolved_auto" target="_blank" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.instagram.com/evolved_auto/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="section animate-on-scroll">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="bE30.jpg" alt="Car Detailing" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Premium Detailing</h3>
+                        <p class="card-text">Our professional detailing services will make your vehicle look showroom-ready. From basic cleaning to premium detailing packages.</p>
+                        <a href="detailing.html" class="btn card-link">View Packages</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="gTes.png" alt="Car Events" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Automotive Events</h3>
+                        <p class="card-text">Join our community at regular car meets, shows, and charity events. Connect with fellow enthusiasts and showcase your ride.</p>
+                        <a href="events.html" class="btn card-link">Upcoming Events</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="intTes.jpg" alt="Interior Detailing" class="card-img">
+                    <div class="card-content">
+                        <h3 class="card-title">Interior Restoration</h3>
+                        <p class="card-text">Revitalize your vehicle's interior with our deep cleaning and restoration services. We'll bring new life to worn interiors.</p>
+                        <a href="detailing.html" class="btn card-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <div class="footer">
-        Powered by <a href="https://moreydigital.ie/" target="_blank">Morey Digital</a>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Evolved Auto. All rights reserved.</p>
+            <p>Powered by <a href="https://moreydigital.ie/" target="_blank" class="footer-link">Morey Digital</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>

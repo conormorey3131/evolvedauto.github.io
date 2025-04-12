@@ -4,222 +4,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolved Auto - Photo Gallery</title>
+    <title>Photo Gallery - Evolved Auto</title>
+    <meta name="description" content="Browse our gallery of automotive detailing work and events at Evolved Auto. See the quality of our work and the community we've built.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="evolvedAutoFavicon.ico">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            background-image: url('/mnt/data/EVOLVED AUTO - 2.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: #00FFFF;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        .navbar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .navbar li {
-            margin: 0 15px;
-        }
-
-        .navbar a {
-            color: #00FFFF;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #008b8b;
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            width: 95%;
-            max-width: 1200px;
-            margin-top: 80px;
-            box-sizing: border-box;
-        }
-
-        h1,
-        h2 {
-            color: #00FFFF;
-            margin-bottom: 20px;
-            margin-top: 0;
-        }
-
-        h1 {
-            font-size: 2em;
-        }
-
-        h2 {
-            font-size: 1.5em;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 0.5s;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        .lightbox:target {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 2em;
-            text-decoration: none;
-            padding: 10px;
-            z-index: 1000;
-        }
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 3em;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .arrow.left {
-            left: 10px;
-        }
-
-        .arrow.right {
-            right: 10px;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
-
-            h2 {
-                font-size: 1.2em;
-            }
-
-            .container {
-                padding: 10px;
-                margin-top: 60px;
-            }
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #00FFFF;
-        }
-
-        .footer a {
-            color: #00FFFF;
-            text-decoration: underline;
-        }
-
-        .footer a:hover {
-            color: #008b8b;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="detailing.html">Price List</a></li>
-            <li><a href="gallery.html">Photo Gallery</a></li>
-            <li><a href="events.html">Events</a></li>
-        </ul>
-    </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">EVOLVED AUTO</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="detailing.html" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="gallery.html" class="navbar-link">Gallery</a></li>
+                <li class="navbar-item"><a href="events.html" class="navbar-link">Events</a></li>
+            </ul>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
     <div class="container">
-        <h1>Evolved Auto - Photo Gallery</h1>
-        <h2>Photos from Fundracer 2024</h2>
+        <section class="hero animate-on-scroll">
+            <h1>Photo Gallery</h1>
+            <p>Showcasing our work and community events</p>
+        </section>
 
-        <div class="gallery">
-            <!-- Repeat this block for each image -->
-            <a href="#img1"><img src="wGtr.jpg" alt="Photo 1"></a>
-            <!-- Add more images as needed -->
+        <section class="section animate-on-scroll">
+            <h2 class="text-center mb-4">Recent Events</h2>
+            <div class="gallery">
+                <a href="#lightbox-1" class="gallery-item">
+                    <img src="wGtr.jpg" alt="Nissan GTR" class="gallery-img">
+                </a>
+                <a href="#lightbox-2" class="gallery-item">
+                    <img src="wMaz.jpg" alt="Mazda" class="gallery-img">
+                </a>
+                <a href="#lightbox-3" class="gallery-item">
+                    <img src="wPor.jpg" alt="Porsche" class="gallery-img">
+                </a>
+                <a href="#lightbox-4" class="gallery-item">
+                    <img src="wR8.jpg" alt="Audi R8" class="gallery-img">
+                </a>
+                <a href="#lightbox-5" class="gallery-item">
+                    <img src="gtrRoss.jpg" alt="Nissan GTR" class="gallery-img">
+                </a>
+                <a href="#lightbox-6" class="gallery-item">
+                    <img src="lamboIan.jpg" alt="Lamborghini" class="gallery-img">
+                </a>
+                <a href="#lightbox-7" class="gallery-item">
+                    <img src="mustangAidan_crop.png" alt="Ford Mustang" class="gallery-img">
+                </a>
+                <a href="#lightbox-8" class="gallery-item">
+                    <img src="m3Coco_c.png" alt="BMW M3" class="gallery-img">
+                </a>
+            </div>
+        </section>
+
+        <section class="section animate-on-scroll">
+            <h2 class="text-center mb-4">Detailing Work</h2>
+            <div class="gallery">
+                <a href="#lightbox-9" class="gallery-item">
+                    <img src="bE30.jpg" alt="BMW E30" class="gallery-img">
+                </a>
+                <a href="#lightbox-10" class="gallery-item">
+                    <img src="bAda.jpg" alt="Detailing Work" class="gallery-img">
+                </a>
+                <a href="#lightbox-11" class="gallery-item">
+                    <img src="bAdam.jpg" alt="Detailing Work" class="gallery-img">
+                </a>
+                <a href="#lightbox-12" class="gallery-item">
+                    <img src="bCor.jpg" alt="Detailing Work" class="gallery-img">
+                </a>
+                <a href="#lightbox-13" class="gallery-item">
+                    <img src="bMer.jpg" alt="Mercedes" class="gallery-img">
+                </a>
+                <a href="#lightbox-14" class="gallery-item">
+                    <img src="bPor.jpg" alt="Porsche" class="gallery-img">
+                </a>
+                <a href="#lightbox-15" class="gallery-item">
+                    <img src="gAmg.jpg" alt="Mercedes AMG" class="gallery-img">
+                </a>
+                <a href="#lightbox-16" class="gallery-item">
+                    <img src="gCar.jpg" alt="Detailing Work" class="gallery-img">
+                </a>
+            </div>
+        </section>
+
+        <!-- Lightboxes -->
+        <!-- Event Photos Lightboxes -->
+        <div id="lightbox-1" class="lightbox">
+            <div class="lightbox-content">
+                <img src="wGtr.jpg" alt="Nissan GTR" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-8">&lsaquo;</a>
+                    <a href="#lightbox-2">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-2" class="lightbox">
+            <div class="lightbox-content">
+                <img src="wMaz.jpg" alt="Mazda" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-1">&lsaquo;</a>
+                    <a href="#lightbox-3">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-3" class="lightbox">
+            <div class="lightbox-content">
+                <img src="wPor.jpg" alt="Porsche" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-2">&lsaquo;</a>
+                    <a href="#lightbox-4">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-4" class="lightbox">
+            <div class="lightbox-content">
+                <img src="wR8.jpg" alt="Audi R8" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-3">&lsaquo;</a>
+                    <a href="#lightbox-5">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-5" class="lightbox">
+            <div class="lightbox-content">
+                <img src="gtrRoss.jpg" alt="Nissan GTR" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-4">&lsaquo;</a>
+                    <a href="#lightbox-6">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-6" class="lightbox">
+            <div class="lightbox-content">
+                <img src="lamboIan.jpg" alt="Lamborghini" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-5">&lsaquo;</a>
+                    <a href="#lightbox-7">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-7" class="lightbox">
+            <div class="lightbox-content">
+                <img src="mustangAidan_crop.png" alt="Ford Mustang" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-6">&lsaquo;</a>
+                    <a href="#lightbox-8">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-8" class="lightbox">
+            <div class="lightbox-content">
+                <img src="m3Coco_c.png" alt="BMW M3" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-7">&lsaquo;</a>
+                    <a href="#lightbox-1">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailing Work Lightboxes -->
+        <div id="lightbox-9" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bE30.jpg" alt="BMW E30" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-16">&lsaquo;</a>
+                    <a href="#lightbox-10">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-10" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bAda.jpg" alt="Detailing Work" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-9">&lsaquo;</a>
+                    <a href="#lightbox-11">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-11" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bAdam.jpg" alt="Detailing Work" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-10">&lsaquo;</a>
+                    <a href="#lightbox-12">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-12" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bCor.jpg" alt="Detailing Work" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-11">&lsaquo;</a>
+                    <a href="#lightbox-13">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-13" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bMer.jpg" alt="Mercedes" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-12">&lsaquo;</a>
+                    <a href="#lightbox-14">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-14" class="lightbox">
+            <div class="lightbox-content">
+                <img src="bPor.jpg" alt="Porsche" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-13">&lsaquo;</a>
+                    <a href="#lightbox-15">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-15" class="lightbox">
+            <div class="lightbox-content">
+                <img src="gAmg.jpg" alt="Mercedes AMG" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-14">&lsaquo;</a>
+                    <a href="#lightbox-16">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lightbox-16" class="lightbox">
+            <div class="lightbox-content">
+                <img src="gCar.jpg" alt="Detailing Work" class="lightbox-img">
+                <a href="#" class="lightbox-close">&times;</a>
+                <div class="lightbox-nav">
+                    <a href="#lightbox-15">&lsaquo;</a>
+                    <a href="#lightbox-9">&rsaquo;</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="footer">
-        Powered by <a href="https://moreydigital.ie/" target="_blank">Morey Digital</a>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Evolved Auto. All rights reserved.</p>
+            <p>Powered by <a href="https://moreydigital.ie/" target="_blank" class="footer-link">Morey Digital</a></p>
+        </div>
+    </footer>
 
-    <script>
-        // JavaScript for handling lightbox navigation
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
